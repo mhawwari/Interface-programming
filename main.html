@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.CSS">
+
+    <style type="text/css">
+        * {margin: 0;padding: 0;}
+    </style>
+ 	<script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/main_script.js"></script>
+	<!--
+    <script src="js/api.js"></script>
+    <script src="js/script_buybeer.js"></script>
+    
+<script>pageLoaded(docLoaded);</script>-->
+</head>
+
+<body>
+<div class="bodyMain">
+    <div class="headerMain">
+          <div id="textHeader">Jamaica<span>Inn</span></div>
+        <div class="container">
+            
+        
+            <div class="navArea">
+              
+                <ul class="nav">
+                    
+        <li> <a  href="main.html" class="current"  >Beverages</a></li>
+		<li> <a href="history.html">Purchase History</a></li>
+        <li> <a href="main.html" id="bev_admin" >Manage Beverages</a></li>
+                    <a href="" id="users_admin"><li>Manage Users</li></a>
+                    <img src ="http://www.iconarchive.com/download/i93784/custom-icon-design/silky-line-user/user.ico" id="login_pic" alt="login" style="width:80px;height:80px">
+                    <div id ="login_id" class="login_id"></div>
+                        <a href ="login.html" id="logout">log out</a>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+
+</div>
+    
+          <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Choose type of beer</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="main.HTML">Alcohol</a>
+    <a href="free.HTML">Alcohol free</a>
+  </div>
+    </div>
+    
+<div class="boxes">
+     <div id = "headline">These choices contain alcohol </div>
+
+ 	<div class="boxContent" id="main">
+        <div class ="values1">
+<form id ="aform">
+
+</form></div>
+      </div>
+
+</div>  
+             
+<div id ="left_side">
+    <div id ="h4">Your cart</div>
+    <div id="cart">
+        <div id ="text"></div>
+    
+    </div>
+    <div id="total">Your total: <div id="total_number">0</div> </div> 
+ 
+     <div id = "buy_button"> 
+        <button onclick="confirmPurchase()" class="dropbtn">BUY</button>
+    </div>
+    <div id = "clear_button"> 
+        <button onclick="clearAll()" class="dropbtn">CLEAR</button>
+    </div>
+    
+    </div>
+</body>
+    
+</html>
+
+
+
+

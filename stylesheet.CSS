@@ -155,21 +155,29 @@
    
     height: 200px; /*100*/
     float: left;
+    padding-left: -15px;
     
 }
 
 .nav {
-    
     list-style: none;
     margin-top: 30px;
+    
 }
 
 .nav a {
     color: black;
     text-decoration: none;
-    font-size:20pt;
-    
-    
+    font-size:14pt;
+   
+}
+
+ul li a:hover, ul li a:focus {
+ color:#de1b1b;
+}
+
+.nav .current {
+    color: #de1b1b;
 }
 
 .nav li {
@@ -177,22 +185,18 @@
     margin-left: 80px;
     margin-top:5%;
     background-color:  #F5F5F5;
-    padding: 15px;
+    padding: 5px;
     border: 1px solid black; /*silver*/
     border-radius: 5px;
-    width:200px;
-    height: 40px;
+    width:140px;
+    height: 45px;
     text-align: center;
-    white-space: nowrap;
+   /* white-space: nowrap;*/
+    padding-left:0px;
 }
 
 
-nav a:hover {
-	color: #ffffff;
-}
- nav  a.current  {
-	color:azure;
-    }
+
 #textHeader span{
 	color: #F29E20 !important;
     position: absolute;
@@ -209,24 +213,26 @@ nav a:hover {
 }
 #login_pic {
     position:absolute;
-    margin-left:25%;
+    margin-left:76%;
     margin-top: 1%
-}
-#login_id{
-    position:absolute;
-    margin-left:71%;
-    margin-top: 7%;
-    font-size: 16pt;
+ 
 }
 #logout {
     position:absolute;
-    margin-left:26%;
-    margin-top: 10%;
+    margin-left: 77%;
+    margin-top: 9%;
     font-size: 12pt;
     white-space: nowrap;
     text-decoration: underline;
     
 }
+#login_id{
+    position:absolute;
+    margin-left:75.5%;
+    margin-top: 7%;
+    font-size: 16pt;
+}
+
 
 #edit_bev {
 padding: 5px;
@@ -477,7 +483,7 @@ right:-15px;
 top:-15px;
 cursor:pointer;
 }
-div#popupEdit {
+#popupEdit {
 position:absolute;
 left:50%;
 top:17%;
@@ -485,7 +491,7 @@ margin-left:-202px;
 font-family:"Exo",sans-serif;
 }
 
-Editform {
+#Editform {
 max-width:300px;
 min-width:250px;
 padding:10px 50px;
@@ -511,18 +517,24 @@ margin:10px -50px;
 border:0;
 border-top:1px solid;
 }
-hr input[type=text] {
-    	background: transparent;
+#input input[type=text] {
+
 width:82%;
 padding:10px;
 margin-top:30px;
-border:1px solid black;
-padding-left:20px;
+border:1px solid #ccc;
+padding-left:40px;
 font-size:16px;
-font-family: "Exo", cursive;
-
+font-family:raleway
 }
-
+#name {
+    background-repeat:no-repeat;
+background-position:5px 7px
+}
+#count {
+    background-repeat:no-repeat;
+background-position:5px 7px
+}
 #price {
 
     margin-bottom:30px

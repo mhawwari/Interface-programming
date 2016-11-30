@@ -15,6 +15,11 @@ $(function (){
 var $main = $('#main'); //Id of html div
 var username = localStorage.getItem('username'); //look at how to hide buttons: manage beverages, manage users 
 var password = localStorage.getItem('password');
+    
+     if (username == 'jorass' || username == 'ervtod' || username == 'hirchr' || username == 'saksru' || 
+            username == 'svetor') {
+         $('bev_admin').show();
+     }
 
 $.ajax({
     
@@ -44,8 +49,8 @@ success: function(main) {
 success: function(main) {
     var first_name = main.payload[0].first_name;
     var last_name = main.payload[0].last_name;
-     document.querySelector('.login_id').innerHTML = first_name + last_name;
-    document.querySelector('.login_id').innerHTML = last_name;
+     document.querySelector('.login_id').innerHTML = first_name +" "+ last_name;
+    //document.querySelector('.login_id').innerHTML = last_name;
     
 }
         });
