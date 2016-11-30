@@ -7,7 +7,7 @@
 /*--global variables---*/
   var bought_array = new Array();
 var total_price = 0;
-
+var name ="";
 
 /*---main ---*/
 $(function (){ 
@@ -15,7 +15,6 @@ $(function (){
 var $main = $('#main'); //Id of html div
 var username = localStorage.getItem('username'); //look at how to hide buttons: manage beverages, manage users 
 var password = localStorage.getItem('password');
-  
 
 $.ajax({
     
@@ -26,17 +25,31 @@ success: function(main) {
 //console.log(history);
 
 //loop for all indices of array payload
-    var beer_count = 0;
+    var beer_count = 0; //to make sure the loops stops when we have 17 beers
     var names = new Array();
     var prices = new Array();
-  
-  var amounts = new Array();
+    var amounts = new Array();
   
     var buttons ="";
     var id_values = 1;
     var id_inc_button = 18;
     var id_dec_button = 35;
+    /*---make call to fetch user that is logged in--*/
+    $(function() {
+        $.ajax({
+  
+	method: 'GET',
+	url: 'http://pub.jamaica-inn.net/fpdb/api.php?username=' + username + '&password=' + password + '&action=iou_get',
+
+success: function(main) {
+    var first_name = main.payload[0].first_name;
+    var last_name = main.payload[0].last_name;
+     document.querySelector('.login_id').innerHTML = first_name + last_name;
+    document.querySelector('.login_id').innerHTML = last_name;
     
+}
+        });
+    });
     /* ta in arry från valda drycker och loopa genom den. Plocka ut namn, count och price. */ 
     
     $.each(main.payload, function(i, its)
@@ -70,7 +83,8 @@ $main.append( '<div class="small_box">' +
           
 }); 
     
-    /*super ugly! will implement loop here but don't know how to do it right now*/ 
+    /*super ugly! will implement loop here but don't know how to do it right now. This is to give every button a different id*/ 
+    
     names = names.split(",");
     amounts = amounts.split(",");
     prices = prices.split(",");
@@ -275,7 +289,7 @@ window.onclick = function(event) {
   }
 }
 
-/*---confirm purchase--*/
+/*---confirm purchase. When click on BUY, the user can see what he/she bought, what the total was as well as new credit--*/
 function confirmPurchase() {
     
     $(function (){ 
@@ -293,7 +307,7 @@ $.ajax({
 
 success: function(main) {
 
-    var assets = main.payload[0].assets;
+    var assets = main.payload[0].assets;  
    //if we want to see new credit after purchase. Maybe not neccesary since it's visible on the page? 
     //var user_id = main.payload[0].user_id;
     
@@ -308,7 +322,7 @@ success: function(main) {
     });
 }
   
-
+/*-- increase number of beers person wants to buy. increments number in value box by one and makes number red to make it easier for the customer to see that he/she has picked that certain beer. Also adds to total price. --*/
 function incrementValue(number, namn, count, price)
 {
 var value = parseInt(document.getElementById(number).value, 10);
@@ -333,7 +347,7 @@ var value = parseInt(document.getElementById(number).value, 10);
 }
 
 
-
+/*--decrease number of beers person wants to buy --*/
 function decreaseValue(number)
 {
     var value = parseInt(document.getElementById(number).value, 10);
@@ -348,7 +362,7 @@ function decreaseValue(number)
   
   
 }
-
+/*-- clear button, removes all beers in the cart and resets the number in each box to zero as well as makes the numbers black again. Also sets the total amount to zero --*/
 function clearAll(){
      $('#text').html("");
     bought_array ="";

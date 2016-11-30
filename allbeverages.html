@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Beverages</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.CSS">
+<script src="js/jquery-3.1.1.min.js"></script>
+
+    <style type="text/css">
+        * {margin: 0;padding: 0;}
+    </style>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/script_allbeverages.js"></script>
+</head>
+
+<body>
+<div class="bodyMain">
+    <div class="headerMain">
+        <div class="container">
+        
+            <div class="navArea">
+                <ul class="nav">
+                    <a href="main.html"><li>Beverages</li></a>
+                    <a href="history.html"><li>Purchase History</li></a>
+        
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table">
+  	<div class="tableHeader">
+    		<div class="col">Beer</div>
+    		<div class="col">Amount</div>
+    		<div class="col">Price (kr)</div>
+  	</div>
+
+ 	<div class="tableContent" id="allBeverages"></div>
+</div>  
+    <div id="body" style="overflow:hidden;">
+     <div id="popupBody">>
+<div id="popupEdit">
+
+<form action="#" id="Editform" method="post" name="form">
+
+<h2>Edit Beverages</h2>
+<hr>
+    <input id="name" name="name" placeholder="Name" type="text"> <br>
+<input id="stock" name="stock" placeholder="Stock" type="text">
+<input id="price" name="price" placeholder="Price" type="text">
+    <img id="close" src="http://www.freeiconspng.com/uploads/round-close-button-png-1.png" onclick="div_hide()">
+    
+
+<a href="javascript:%20check_empty()" id="submit">Send</a>
+</form>
+</div>
+
+</div>
+    </div>
+</body>
+</html>

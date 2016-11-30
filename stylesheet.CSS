@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
+@import url("http://fonts.googleapis.com/css?family=Raleway");
 
 
 
@@ -138,7 +139,7 @@
 
 .headerMain {
     background-color: #de1b1b;
-    height: 100px;
+    height: 200px;
     width: 100%;
 }
 
@@ -146,12 +147,13 @@
     width: 960px;
     height: auto;
     margin: 0 auto;
+    
 }
 
 
 .navArea {
    
-    height: 100px;
+    height: 200px; /*100*/
     float: left;
     
 }
@@ -163,85 +165,80 @@
 }
 
 .nav a {
-    color: white;
+    color: black;
     text-decoration: none;
+    font-size:20pt;
+    
+    
 }
 
 .nav li {
     float: left;
-    margin-left: 30px;
-    background-color: #252525;
-    padding: 8px;
-    border: 1px solid silver;
+    margin-left: 80px;
+    margin-top:5%;
+    background-color:  #F5F5F5;
+    padding: 15px;
+    border: 1px solid black; /*silver*/
     border-radius: 5px;
-}
-
-/* ----------------- Table ----------------- */
-
-.table {
-    width: 960px;
-    position: absolute;
-    top: 280px;
-    left: 190px;
-
-}
-
-.table th, td {
-
-    text-align: left;
-    padding: 5px;
-}
-
-.tableDept {
-    width: 960px;
-    position: absolute;
-    top: 100px;
-    left: 190px;
-}
-
-.tableDept th, td {
-
-    text-align: left;
-    padding: 5px;
-}
-
-
-.tableHistory {
-    width: 960px;
-    position: absolute;
-    top: 100px;
-    left: 190px;   
-}
-
-.tableHistory th, td {
-
-    text-align: left;
-    padding: 5px;
-}
-
-
-.tableallBeverages {
-    width: 960px;
-    position: absolute;
-    top: 100px;
-    left: 190px;   
-}
-
-.tableAllbeverages th, td {
-
-    text-align: left;
-    padding: 5px;
-}
-
-
-
-.table {
-    width: 75%;
-    position: absolute;
-    top: 150px;
-    left: 170px;
-    padding: 1.5ex;
+    width:200px;
+    height: 40px;
     text-align: center;
+    white-space: nowrap;
+}
+
+
+nav a:hover {
+	color: #ffffff;
+}
+ nav  a.current  {
+	color:azure;
+    }
+#textHeader span{
+	color: #F29E20 !important;
+    position: absolute;
+    margin-left: -40%;
+    margin-top: 30%;
+    font-size: 30pt;
+}
+#textHeader {
+      position: absolute;
+    font-size:40pt;
+    margin-left:2%;
+    margin-top: 2%;
+    color:white;
+}
+#login_pic {
+    position:absolute;
+    margin-left:25%;
+    margin-top: 1%
+}
+#login_id{
+    position:absolute;
+    margin-left:71%;
+    margin-top: 7%;
+    font-size: 16pt;
+}
+#logout {
+    position:absolute;
+    margin-left:26%;
+    margin-top: 10%;
+    font-size: 12pt;
+    white-space: nowrap;
+    text-decoration: underline;
+    
+}
+
+#edit_bev {
+padding: 5px;
+}
+/* ----------------- Table all pages ----------------- */
+
+.table {
+    width: 960px;
+    position: absolute;
+    top: 300px;
+    left: 190px;
+    
 
 }
 
@@ -249,19 +246,7 @@
 
     text-align: left;
     padding: 5px;
-}
-
-.tableDept {
-    width: 960px;
-    position: absolute;
-    top: 100px;
-    left: 190px;
-}
-
-.tableDept th, td {
-
-    text-align: left;
-    padding: 5px;
+    
 }
 
 
@@ -273,19 +258,26 @@
     border-width: 2px;
     color: antiquewhite;
     background-color: lightslategray;  
+    font-family: 'Exo', sans-serif;
+    font-size:16pt;
 }
 
 .row {
-    padding: 2px;
+    padding: 5px;
     border: solid;
     border-bottom: 2px;
     border-width: 2px;
+       background-color:#F5F5F5 ;
+  
 }
 
 .col {
     padding: 5px;
     display: inline-block;
     width: 30%;
+    text-align: center;
+   
+    
 }
 #headline{
          padding: 10px;
@@ -294,7 +286,7 @@
     
 }
 
-/* ----- Beer boxes ---*/ 
+/* ----- Beer boxes in main ---*/ 
 
 .small_box {
       border: 1px solid;
@@ -353,6 +345,62 @@
     margin-top: -55px;
     margin-left: 18%;
 }
+/*---- check out in main---*/ 
+#left_side{
+    margin: 75%;
+    margin-top: 13%;
+}
+#cart {
+    border: 1px dotted;
+    width: 250px;
+    height: 200px;
+    list-style-type: none;
+    
+
+    padding: 2px 0 0 0;
+    
+}
+#h4 {
+font-family: 'Exo', sans-serif;
+    font-size: 20pt;
+    white-space: nowrap;
+    
+}
+#total {
+font-family: 'Exo', sans-serif;
+    font-size: 20pt;
+    white-space: nowrap;
+  
+    
+    
+}
+
+
+#text {
+font-family: 'Exo', sans-serif;
+    font-size: 12pt;
+    white-space: pre-line;
+    
+    
+}
+  #buy_button {
+
+      padding: 5px 0 0 0;
+    position:relative;
+      margin-left: 2em;
+      margin-top: 2em;
+   
+}  
+#clear_button {
+
+      padding: 5px 0 0 0;
+    position:absolute;
+    margin-left:8%;
+    margin-top: -57px;
+ 
+    
+    
+}
 
 /* ----------------------- DropDown -------------------------- */
 
@@ -404,61 +452,112 @@
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-/*---- check out---*/ 
-#left_side{
-    margin: 75%;
-    margin-top: 13%;
-}
-#dropbox {
-    border: 1px dotted;
-    width: 250px;
-    height: 200px;
-    list-style-type: none;
-    
+/*---pop up --*/
 
-    padding: 2px 0 0 0;
-    
+/*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+#popupBody {
+width:100%;
+height:100%;
+opacity: 0.97;
+top:0;
+left:0;
+display:none;
+position:fixed;
+background-color:#313131;
+overflow:auto;
 }
-#h4 {
-font-family: 'Exo', sans-serif;
+
+img#close {
+position:absolute;
+    width:30px;
+    height:30px;
+right:-15px;
+top:-15px;
+cursor:pointer;
+}
+div#popupEdit {
+position:absolute;
+left:50%;
+top:17%;
+margin-left:-202px;
+font-family:"Exo",sans-serif;
+}
+
+Editform {
+max-width:300px;
+min-width:250px;
+padding:10px 50px;
+border:2px solid black;
+border-radius:2px;
+background-color:#fff
+}
+p {
+margin-top:30px;
+}
+h2 {
+background-color:#de1b1b;
+padding:20px 35px;
+margin:-10px -50px;
+text-align:center;
+font-family: "Exo",sans-serif;
+    color: #F5F5F5;
     font-size: 20pt;
-    white-space: nowrap;
-    
+    text-decoration: none;
 }
-#total {
-font-family: 'Exo', sans-serif;
-    font-size: 20pt;
-    white-space: nowrap;
-  
-    
-    
+hr {
+margin:10px -50px;
+border:0;
+border-top:1px solid;
+}
+hr input[type=text] {
+    	background: transparent;
+width:82%;
+padding:10px;
+margin-top:30px;
+border:1px solid black;
+padding-left:20px;
+font-size:16px;
+font-family: "Exo", cursive;
+
 }
 
+#price {
 
-#text {
-font-family: 'Exo', sans-serif;
-    font-size: 12pt;
-    white-space: pre-line;
-    
-    
+    margin-bottom:30px
 }
-  #buy_button {
 
-      padding: 5px 0 0 0;
-    position:relative;
-      margin-left: 2em;
-      margin-top: 2em;
-   
-}  
-#clear_button {
-
-      padding: 5px 0 0 0;
-    position:absolute;
-    margin-left:8%;
-    margin-top: -57px;
- 
-    
-    
+#submit {
+text-decoration:none;
+width:100%;
+text-align:center;
+display:block;
+background-color:#de1b1b;
+color:#fff;
+border:1px solid #FFCB00;
+padding:10px 0;
+font-size:20px;
+cursor:pointer;
+border-radius:5px;
 }
-  
-    
+span {
+color:red;
+font-weight:700
+}
+
+::-webkit-input-placeholder {
+   color: gray;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: gray;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: gray;  
+}
+
+:-ms-input-placeholder {  
+   color: gray;  
+}
