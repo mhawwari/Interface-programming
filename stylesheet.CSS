@@ -266,6 +266,8 @@ padding: 5px;
     background-color: lightslategray;  
     font-family: 'Exo', sans-serif;
     font-size:16pt;
+    width: 1010px;
+    padding-bottom: 10px;
 }
 
 .row {
@@ -291,7 +293,11 @@ padding: 5px;
     font-size:20pt;
     
 }
-
+.tableContent {
+    width: 1024px;
+    height:380px;
+    overflow: auto;
+}
 /* ----- Beer boxes in main ---*/ 
 
 .small_box {
