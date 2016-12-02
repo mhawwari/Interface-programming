@@ -242,7 +242,7 @@ padding: 5px;
 .table {
     width: 960px;
     position: absolute;
-    top: 300px;
+    top: 250px;
     left: 190px;
     
 
@@ -288,7 +288,7 @@ padding: 5px;
     
 }
 #headline{
-         padding: 10px;
+         padding-top: 20px;
     font-family: 'Exo', sans-serif;
     font-size:20pt;
     
@@ -356,6 +356,10 @@ padding: 5px;
     position:absolute;
     margin-top: -55px;
     margin-left: 18%;
+}
+
+#non-alcohol {
+    padding-top: 10px;
 }
 /*---- check out in main---*/ 
 #left_side{

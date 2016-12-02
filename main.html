@@ -30,7 +30,7 @@
                     
         <li> <a  href="main.html" class="current"  >Beverages</a></li>
 		<li> <a href="history.html">Purchase History</a></li>
-        <li> <a href="main.html" id="bev_admin" >Manage Beverages</a></li>
+        <li> <a href="allbeverages.html" id="bev_admin" >Manage Beverages</a></li>
                     <a href="" id="users_admin"><li>Manage Users</li></a>
                     <img src ="http://www.iconarchive.com/download/i93784/custom-icon-design/silky-line-user/user.ico" id="login_pic" alt="login" style="width:80px;height:80px">
                     <div id ="login_id" class="login_id"></div>
@@ -48,7 +48,7 @@
   <button onclick="myFunction()" class="dropbtn">Choose type of beer</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="main.HTML">Alcohol</a>
-    <a href="free.HTML">Alcohol free</a>
+    <a id="nonAlc_button">Alcohol free</a>
   </div>
     </div>
     
@@ -56,13 +56,14 @@
      <div id = "headline">These choices contain alcohol </div>
 
  	<div class="boxContent" id="main">
-        <div class ="values1">
+        
 <form id ="aform">
 
 </form></div>
-      </div>
+    <div id = "headline">These choices are non-alcoholic </div>
+        <div class="boxContent" id="non-alcohol"></div>
 
-</div>  
+      </div>
              
 <div id ="left_side">
     <div id ="h4">Your cart</div>
