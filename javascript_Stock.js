@@ -26,10 +26,10 @@ $.each(inventory.payload, function(i, inv)
 }
 });
 
-for (i=1; i<21; i++)
-{
+//for (i=1; i<21; i++)
+//{
 	//$stock.append('<div id="beer_id"><div id="name">test' + i + '</div><div id="price"> price test' + i + '</div></div>' );
-}
+//}
 
 //Activates drag and drop option between inventory and stock
 $( function() {
@@ -39,7 +39,7 @@ $( function() {
   } );
 
 
-
+//Should be A code to fill Stock with current occupying drinks
 //jQuery.getJSON( url [, data ] [, success ] )
 //$.getJSON('E:/Drag/js/stock.json', function(stock) {
 //		$.each(stock, function(i, st)
