@@ -161,7 +161,7 @@
 
 .nav {
     list-style: none;
-    margin-top: 30px;
+    margin-top: 17px;
     
 }
 
@@ -191,10 +191,13 @@ ul li a:hover, ul li a:focus {
     width:140px;
     height: 45px;
     text-align: center;
-   /* white-space: nowrap;*/
+
     padding-left:0px;
 }
 
+#admin_buttons {
+    display: inline;
+}
 
 
 #textHeader span{
@@ -212,27 +215,28 @@ ul li a:hover, ul li a:focus {
     color:white;
 }
 #login_pic {
-    position:absolute;
-    margin-left:76%;
-    margin-top: 1%
+    position:relative;
+    margin-left:62em;
+    margin-top: -15em;
  
 }
+
+#login_id{
+    position:relative;
+    margin-left:46em;
+
+    font-size: 16pt;
+    white-space: nowrap;
+    
+}
 #logout {
-    position:absolute;
-    margin-left: 77%;
-    margin-top: 9%;
+    position:relative;
+    margin-left:63em;
     font-size: 12pt;
     white-space: nowrap;
     text-decoration: underline;
     
 }
-#login_id{
-    position:absolute;
-    margin-left:75.5%;
-    margin-top: 7%;
-    font-size: 16pt;
-}
-
 
 #edit_bev {
 padding: 5px;
@@ -246,27 +250,30 @@ padding: 5px;
     left: 190px;
     
 
+    
+
 }
 
 .table th, td {
 
     text-align: left;
     padding: 5px;
+        
     
 }
 
 
 .tableHeader {
-        padding: 7px;
+    padding: 7px;
     border: solid;
-    border-bottom: 0px;
+    border-bottom: 2px;
     border-color: black;
     border-width: 2px;
     color: antiquewhite;
     background-color: lightslategray;  
     font-family: 'Exo', sans-serif;
     font-size:16pt;
-    width: 1010px;
+    width: 1007px;
     padding-bottom: 10px;
 }
 
@@ -275,7 +282,7 @@ padding: 5px;
     border: solid;
     border-bottom: 2px;
     border-width: 2px;
-       background-color:#F5F5F5 ;
+    background-color:#F5F5F5 ;
   
 }
 
@@ -284,11 +291,11 @@ padding: 5px;
     display: inline-block;
     width: 30%;
     text-align: center;
-   
-    
+
 }
+
 #headline{
-         padding-top: 20px;
+    padding-top: 20px;
     font-family: 'Exo', sans-serif;
     font-size:20pt;
     
@@ -297,6 +304,8 @@ padding: 5px;
     width: 1024px;
     height:380px;
     overflow: auto;
+  
+    border-bottom: 2px;
 }
 /* ----- Beer boxes in main ---*/ 
 
@@ -334,7 +343,9 @@ padding: 5px;
     margin-left: 2%;
     margin-right:25%;
     padding: 2%;
-    width : 80%;
+    width : 70%;
+ 
+  
 }
 .values {
     width:20px;
@@ -362,15 +373,20 @@ padding: 5px;
     padding-top: 10px;
 }
 /*---- check out in main---*/ 
-#left_side{
+#right_side{
     margin: 75%;
     margin-top: 13%;
+    width: 20%;
+    position: fixed;
+    
+    
 }
 #cart {
     border: 1px dotted;
     width: 250px;
     height: 200px;
     list-style-type: none;
+   
     
 
     padding: 2px 0 0 0;
@@ -402,21 +418,43 @@ font-family: 'Exo', sans-serif;
   #buy_button {
 
       padding: 5px 0 0 0;
-    position:relative;
-      margin-left: 2em;
-      margin-top: 2em;
+    position:fixed;
+      margin-left: 10%;
+      margin-top: -40px;
+      
    
 }  
 #clear_button {
 
       padding: 5px 0 0 0;
-    position:absolute;
-    margin-left:8%;
-    margin-top: -57px;
+    position:fixed;
+    margin-left:15%;
+    margin-top: -40px;
+    
  
     
     
 }
+/*------Manage beverages--*/
+#change_bev {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.editbtn {
+    background-color: #de1b1b;
+    color: white;
+    padding: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: 'EXO', sans-serif;
+    position: static;
+    
+  
+    
+}
+
 
 /* ----------------------- DropDown -------------------------- */
 
@@ -430,6 +468,9 @@ font-family: 'Exo', sans-serif;
     border: none;
     cursor: pointer;
     font-family: 'EXO', sans-serif;
+    
+  
+    
 }
 
 /* Dropdown button on hover & focus */
@@ -439,10 +480,10 @@ font-family: 'Exo', sans-serif;
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-    position: relative;
+    position: fixed;
     display: inline-block;
-    left: 190px;
-    top: 30px
+    left: 77%;
+    top: 29%;
 }
 
 /* Dropdown Content (Hidden by Default) */
