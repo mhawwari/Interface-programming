@@ -1,3 +1,8 @@
+AllBevNames = new Array();
+AllBevStock = new Array();
+AllBevPrices = new Array();
+
+
 function connectionAPI(userID,password) {
 var apiTemp = new APIConnect(),
     userID = userID,
@@ -28,15 +33,13 @@ for (i=0; i<payload.length; i++) {
         localStorage.setItem('password',Pass);
         correct = true;
         //If admin, open the extended main page
-        if (username == 'jorass' || username == 'ervtod' || username == 'hirchr' || username == 'saksru' || 
-            username == 'svetor') {
+       
             window.location = 'main.HTML';
-        }
-        
+    
         
 
-        delete Pass; //kolla om man kan deleta från storage när man refreshar sidan 
-        delete use;
+        Pass = ""; //kolla om man kan deleta från storage när man refreshar sidan, maybe it deletes??? 
+        use = "" ;
     
     }
     
@@ -67,4 +70,63 @@ function pageLoaded(form) {
     
 
 }
+/*----load arrays and put into local storage ---*/
+
+$(function (){ 
+var $login = $('#login'); //Id of html div
+$.ajax({
+	method: 'GET',
+	url: 'http://pub.jamaica-inn.net/fpdb/api.php?username=jorass' + '&password=jorass' + '&action=inventory_get',
+
+success: function(login) {
+$.each(login.payload, function(i, his)
+{
+    AllBevNames += his.namn + ',';
+    AllBevStock += his.count +',';
+    AllBevPrices += his.price + ',';
+    
+    
+});
+    NoAlcNames = new Array();
+NoAlcStock = new Array();
+NoAlcPrices = new Array();
+    $(function() {
+    $.each(login.payload, function(i, its)
+{ 
+    $.ajax({
+    
+	method: 'GET',
+	url: 'http://pub.jamaica-inn.net/fpdb/api.php?username=' + 'jorass' + '&password=' + 'jorass' + '&action=beer_data_get&beer_id=' + its.beer_id,
+        
+success: function(login) {
+   
+  var alcohol = login.payload[0].alkoholhalt;
+    console.log(login.payload[0].alkoholhalt);
+  if(  (alcohol == "0%" || alcohol == "0.5%") )  {
+      NoAlcNames += its.namn +',';
+      NoAlcStock += its.count + ',';
+      NoAlcPrices += its.price + ',';
+
+  }
+      localStorage.setItem("NoAlcName", NoAlcNames);
+        localStorage.setItem("NoAlcStock", NoAlcStock);
+        localStorage.setItem("NoAlcPrices", NoAlcPrices);
+}
+       
+    });
+            
+    });
+     alert(NoAlcNames);
+      
+        
+      });
+    
+    localStorage.setItem('count', AllBevStock);
+    localStorage.setItem('prices',AllBevPrices);
+    localStorage.setItem('names', AllBevNames);
+    
+
+}
+});
+});
 

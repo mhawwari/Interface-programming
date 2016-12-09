@@ -9,7 +9,9 @@
         * {margin: 0;padding: 0;}
     </style>
  	<script src="js/jquery-3.1.1.min.js"></script>
+    
     <script src="js/main_script.js"></script>
+ 
 	<!--
     <script src="js/api.js"></script>
     <script src="js/script_buybeer.js"></script>
@@ -30,13 +32,16 @@
                     
         <li> <a  href="main.html" class="current"  >Beverages</a></li>
 		<li> <a href="history.html">Purchase History</a></li>
-        <li> <a href="allbeverages.html" id="bev_admin" >Manage Beverages</a></li>
-                    <a href="" id="users_admin"><li>Manage Users</li></a>
-                    <img src ="http://www.iconarchive.com/download/i93784/custom-icon-design/silky-line-user/user.ico" id="login_pic" alt="login" style="width:80px;height:80px">
-                    <div id ="login_id" class="login_id"></div>
-                        <a href ="login.html" id="logout">log out</a>
-
+              <div id="admin_buttons">     
+        <li>  <a href="allbeverages.html" >Manage Beverages</a></li>
+                <li>  <a href="#">Manage Users</a></li>
+                    </div>
+               
+                    
                 </ul>
+            <img src ="http://www.iconarchive.com/download/i93784/custom-icon-design/silky-line-user/user.ico" id="login_pic_main" alt="login" style="width:80px;height:80px"/>
+                <div id ="login_id_main" class="login_id"></div>
+                        <a href ="login.html" id="logout_main">log out</a>
             </div>
         </div>
     </div>
@@ -47,11 +52,13 @@
           <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Choose type of beer</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="main.HTML">Alcohol</a>
-    <a id="nonAlc_button">Alcohol free</a>
+    <a href="#" id = Alc_button>Alcohol</a>
+      
+    <a href ="#" id ="nonAlc_button">Alcohol free</a>
+      
   </div>
     </div>
-    
+   
 <div class="boxes">
      <div id = "headline">These choices contain alcohol </div>
 
@@ -64,8 +71,8 @@
         <div class="boxContent" id="non-alcohol"></div>
 
       </div>
-             
-<div id ="left_side">
+
+<div id ="right_side">
     <div id ="h4">Your cart</div>
     <div id="cart">
         <div id ="text"></div>
